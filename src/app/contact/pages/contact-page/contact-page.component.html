@@ -1,0 +1,11 @@
+<div class="container">
+    <h2>Fill in the form to add a contact: </h2>
+
+    <contact-form (newContactEvent)="addContact($event)"></contact-form>
+
+    <h2>Contacts: </h2>
+    <div *ngFor="let contact of contacts" class="contacts">
+        <p class="first-name">{{contact.firstName}}</p>
+        <p class="email">{{contact.email}}</p>
+    </div>
+</div>

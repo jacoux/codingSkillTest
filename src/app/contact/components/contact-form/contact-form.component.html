@@ -1,0 +1,25 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="firstName">Name:</label>
+        <input type="text" id="firstName" formControlName="firstName" />
+        <div *ngIf="contactForm.get('firstName')?.hasError('required') && contactForm.get('firstName')?.touched" class="error">
+            First name is required.
+        </div>
+        <div *ngIf="contactForm.get('firstName')?.hasError('minlength') && contactForm.get('firstName')?.touched" class="error">
+            Name must be at least 3 characters long.
+        </div>
+    </div>
+
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" formControlName="email" />
+        <div *ngIf="contactForm.get('email')?.hasError('required') && contactForm.get('email')?.touched" class="error">
+            Email is required.
+        </div>
+        <div *ngIf="contactForm.get('email')?.hasError('email') && contactForm.get('email')?.touched" class="error">
+            Please enter a valid email address.
+        </div>
+    </div>
+
+    <button type="submit" [disabled]="contactForm.invalid">Submit contact</button>
+</form>

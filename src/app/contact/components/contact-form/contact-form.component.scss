@@ -1,0 +1,32 @@
+label {
+    margin: 10px;
+}
+input{
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.error {
+    color: #850783;
+    font-weight: 800;
+}
+
+button {
+    border: none;
+    color: #f3f3f3;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    background-color: #8e6800;
+    margin: 10px;
+    ;
+
+    &:hover {
+        cursor: pointer;
+        color: #8e6800;
+        background-color: #f3f3f3;
+    }
+}
